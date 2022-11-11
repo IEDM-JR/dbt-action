@@ -1,4 +1,3 @@
 {{ config(materialized='table') }}
 
-SELECT *
-FROM orders;
+SELECT * FROM IEDM1DB.PROJECT.orders;
