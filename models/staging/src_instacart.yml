@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: instacart
+    database: IEDM1DB
+    schema: PROJECT
+    tables: 
+      - name: aisles
+      - name: departments
+      - name: products
+      - name: orders
+      - name: order_products_train
+      #//loaded_at_field:we need to configure this to make it a pipeline
+
+
+# Include the order-products which is 'test' in eval_set column in overall orders file
+# in this case, only the 'test' part will get visualized.
