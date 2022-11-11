@@ -10,7 +10,10 @@ sources:
       - name: products
       - name: orders
       - name: order_products_train
-      #//loaded_at_field:we need to configure this to make it a pipeline
+      #loaded_at_field:we need to configure this to make it a pipeline
+      # freshness, 
+      # warn_after:
+      # error_after:
 
 
 # Include the order-products which is 'test' in eval_set column in overall orders file
