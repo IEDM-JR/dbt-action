@@ -8,5 +8,4 @@ select
 	ORDER_DOW
 from 
     (select order_id, user_id, order_hour_of_day, order_dow
-    from project.orders)
-limit 10;
+    FROM {{source('instacart','orders')}});
