@@ -10,10 +10,19 @@ sources:
       - name: products
       - name: orders
       - name: order_products_train
+      - name: order_products_prior
       #loaded_at_field:we need to configure this to make it a pipeline
       # freshness, 
       # warn_after:
       # error_after:
+
+models:
+  - name: stg_orders
+  - name: stg_products
+  - name: stg_order_product
+  - name: stg_aisles
+
+  
 
 
 # Include the order-products which is 'test' in eval_set column in overall orders file
