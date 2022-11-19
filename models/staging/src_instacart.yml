@@ -21,6 +21,7 @@ models:
   - name: stg_products
   - name: stg_order_product
   - name: stg_aisles
+  - name: stg_departments
 
   
 
