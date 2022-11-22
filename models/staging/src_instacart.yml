@@ -10,8 +10,29 @@ sources:
       - name: products
       - name: orders
       - name: order_products_train
+<<<<<<< HEAD
       
 model:
   - name: stg_orders
   - name: stg_products
   - name: stg_order_product
+=======
+      - name: order_products_prior
+      #loaded_at_field:we need to configure this to make it a pipeline
+      # freshness, 
+      # warn_after:
+      # error_after:
+
+models:
+  - name: stg_orders
+  - name: stg_products
+  - name: stg_order_product
+  - name: stg_aisles
+  - name: stg_departments
+
+  
+
+
+# Include the order-products which is 'test' in eval_set column in overall orders file
+# in this case, only the 'test' part will get visualized.
+>>>>>>> f4e3a48dcfb53cf352da8fddc8eec17618665b22
