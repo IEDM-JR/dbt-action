@@ -38,6 +38,6 @@ models:
     example:
       materialized: view
     marts:
-      +materialized: view
-    res:
       +materialized: table
+    int:
+      +materialized: view
