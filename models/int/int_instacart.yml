@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: stg_orders
+  - name: stg_order_product
+
+models:
+  - name: int_order_join_product
+    description: order join product on product_id column, to find the product name for specific one
+    columns:
+      - name: order_id
+      - name: order_number
+      - name: product_id
+      - name: reordered
+      - name: user_id
+      - name: add_to_cart_order
+      - name: dow
+      - name: hod
+      - name: dspo
