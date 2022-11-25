@@ -1,0 +1,2 @@
+SELECT PRODUCT_ID, PRODUCT_NAME, AISLE_ID, DEPARTMENT_ID
+FROM {{source('instacart','products')}}
