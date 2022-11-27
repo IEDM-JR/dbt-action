@@ -28,9 +28,6 @@ models:
         description: foreign key of the table though not applied in this project.
       - name: eval_set
         description: evaluation set or training set
-        tests:
-        - accepted_values:
-            values: ['test']
       - name: order_dow
         description: order day of week, should have a sigular test to test range between 1 to 7, not implemented yet
       - name: order_hour_of_day

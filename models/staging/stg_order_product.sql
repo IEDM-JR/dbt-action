@@ -1,1 +1,1 @@
-select * from {{source('instacart','order_products_train')}}
+SELECT * FROM {{source('instacart','order_products_train')}}
