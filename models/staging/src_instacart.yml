@@ -23,7 +23,7 @@ models:
         description: primary key of the table
         tests:
           - unique
-          - not-null
+          - not_null
       - name: user_id
         description: foreign key of the table though not applied in this project.
       - name: eval_set
@@ -40,7 +40,7 @@ models:
         description: primary key of the table, id of the product
         tests:
           - unique
-          - not-null
+          - not_null
       - name: product_name
         description: name of the product
       - name: aisle_id
@@ -83,7 +83,7 @@ models:
         description: primary key of the table
         tests:
           - unique
-          - not-null
+          - not_null
       - name: aisle
         description: name of the aisle
   - name: stg_departments
@@ -92,7 +92,7 @@ models:
         description: primary key of the table
         tests: 
           - unique
-          - not-null
+          - not_null
       - name: department
         description: name of the department
 
