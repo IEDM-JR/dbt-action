@@ -18,10 +18,83 @@ sources:
 
 models:
   - name: stg_orders
+    columns:
+      - name: order_id
+        description: primary key of the table
+        tests:
+          - unique
+          - not_null
+      - name: user_id
+        description: foreign key of the table though not applied in this project.
+      - name: eval_set
+        description: evaluation set or training set
+      - name: order_dow
+        description: order day of week, should have a sigular test to test range between 1 to 7, not implemented yet
+      - name: order_hour_of_day
+        description: orday hour of day, should have a sigular test to test range between 0 to 23, not implemented yet
+      - name: days_since_prior_order
+        description: days_since_prior_order, should have a singular test to test the column greater than zero, not implemented yet
   - name: stg_products
+    columns:
+      - name: product_id
+        description: primary key of the table, id of the product
+        tests:
+          - unique
+          - not_null
+      - name: product_name
+        description: name of the product
+      - name: aisle_id
+        description: foreign key of the table, id of the aisle product stores in.
+        tests:
+          - relationships:
+              to: ref('stg_aisles')
+              field: aisle_id
+      - name: department_id
+        description: foreign key of the table, id of department
+        tests:
+          - relationships:
+              to: ref('stg_departments')
+              field: department_id
   - name: stg_order_product
+    description: fk, I don't want to type any more shit.
+    columns:
+      - name: order_id
+        description: foreign key of the table, id of order
+        tests:
+          - relationships:
+              to: ref('stg_orders')
+              field: order_id
+      - name: product_id
+        description: foreign key of the table, id of product
+        tests:
+          - relationships:
+              to: ref('stg_products')
+              field: product_id
+      - name: add_to_cart_order
+        description: at least one, need a singular test
+      - name: reordered
+        description: reordered, 1 means customer reorder, 0 means no
+        tests:
+          - accepted_values:
+              values: [0,1]
   - name: stg_aisles
+    columns:
+      - name: aisle_id
+        description: primary key of the table
+        tests:
+          - unique
+          - not_null
+      - name: aisle
+        description: name of the aisle
   - name: stg_departments
+    columns:
+      - name: department_id
+        description: primary key of the table
+        tests: 
+          - unique
+          - not_null
+      - name: department
+        description: name of the department
 
   
 

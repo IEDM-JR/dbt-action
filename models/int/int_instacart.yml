@@ -1,0 +1,23 @@
+version: 2
+
+
+
+models:
+  - name: int_order_join_orderproduct
+    description: order join order_product on product_id column, to find the product name for specific one
+    columns:
+      - name: order_id
+      - name: order_number
+      - name: product_id
+      - name: reordered
+      - name: user_id
+      - name: add_to_cart_order
+      - name: dow
+      - name: hod
+      - name: dspo
+  - name: int_op_join_product
+    description: int_order_join_orderproduct join stg_products on product_id
+  - name: int_opp_join_departments
+    description: the previous model join stg_departments
+  - name: int_fct_table
+    description: join aisles and become fact table.
